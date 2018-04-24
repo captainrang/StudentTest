@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.classTest.student.dao.UserDao">
+<select id="getUserInfo" parameterType="map" resultType="map">
+    select * from student where 1=1 <if test="sno !='' and sno!=null"> sno = #{sno}</if>
+</select>
+
+    <select id="getLoginUserInfo" resultType="map">
+        <if test="usertype == 1">
+            select s.* ,cs.id as classId,cs.name as className
+            from student s join user_class uc on s.id = uc.userId and type = 0  join class cs
+            on cs.id = uc.classId
+            where username=#{username} and password = #{password} and is_delete=0
+        </if>
+        <if test="usertype == 2">
+            select s.* ,cs.id as classId,cs.name as className
+            from teacher s join user_class uc on s.id = uc.userId and type = 1 join class cs
+            on cs.id = uc.classId
+            where username=#{username} and password = #{password} and is_delete=0
+        </if>
+    </select>
+    <select id="queryTest" resultType="map">
+        select id,title from task_type where end_date &lt; now()
+    </select>
+    <select id="tj" resultType="map">
+       SELECT
+	t.reached,
+	t.targetReach,
+	CONCAT(FORMAT(t.reached / (
+			CASE
+			WHEN t.targetReach = 0 THEN
+				1
+			ELSE
+				t.targetReach
+			END
+		),2)*100 ,'%')  AS reachpercent
+FROM
+	(
+		SELECT
+			count(1) targetReach,
+			count(
+				sed.gmt_create > DATE_ADD(
+					str_to_date(
+						DATE_FORMAT(NOW(), '%Y-%m-%d'),
+						'%Y-%m-%d %H:%i:%s'
+					),
+					INTERVAL (
+						SELECT
+							classTime
+						FROM
+							class cs
+						WHERE
+							cs.id = #{classId}
+					) HOUR
+				)
+			) AS reached
+		FROM
+			student s
+		JOIN user_class uc ON uc.userId = s.id and uc.type = 0
+		LEFT JOIN signed sed ON sed.stuId = s.id
+		WHERE
+			1 = 1
+		AND uc.classId = #{classId}
+
+	) t
+    </select>
+
+	<select id="getZxTest" resultType="map">
+        select id,title from task_type where 1=1 order by end_date desc limit 0,1;
+    </select>
+
+	<select id="isnotSign" resultType="java.lang.Long">
+		select count(1) from signed where date_format(gmt_create,'%Y-%m-%d') = CURDATE() and stuId = #{id}
+	</select>
+
+
+	<insert id="signed">
+		insert into signed(stuId,is_sign) VALUES(#{id},1) ON DUPLICATE KEY UPDATE is_sign=1
+	</insert>
+
+	<insert id="addNewTest"  parameterType="map" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+		insert into task_type(title,user_id,begin_date,end_date,status,testTime)
+		values(#{testName},#{id},now(),DATE_ADD(now(),INTERVAL #{testTime} MINUTE),1,#{testTime})
+	</insert>
+
+	<insert id="addNewQuestion1" parameterType="map" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+			insert into task_question(title,sort,task_id,type) VALUES(#{title},#{sort},#{newTestId},#{add_questionType})
+	</insert>
+
+	<insert id="addOption1" parameterType="map">
+		<if test="add_questionType == 4 ||add_questionType==5">
+			INSERT into task_question_option(question_id,remark) VALUES(#{id},#{add_remarks})
+		</if>
+		<if test="add_questionType == 1 ||add_questionType==2">
+			INSERT into task_question_option(question_id,option_content) values
+			<foreach collection="add_questionOption" index="index" item="item" separator=",">
+				( #{id}, #{item} )
+			</foreach>
+		</if>
+	</insert>
+
+	<select id="getTestBaseInfo" parameterType="map" resultType="map">
+	select * from task_type where id=#{newTestId}
+	</select>
+
+	<!-- 查询单个调查对应的问题 -->
+	<select id="getTest" resultType="map">
+	select * from task_question where task_id = #{newTestId}
+	</select>
+
+	<select id="getOptions" resultType="map">
+	select * from task_question_option where question_id = #{questionId}
+	</select>
+
+	<!-- 查询单选对应的答案 -->
+	<select id="getAnswers" resultType="java.lang.String" parameterType="map">
+	select * from task_question_answer sqa join task_question_option sqo on sqo.id = sqa.option_id
+	join task_question sq on sq.id = sqa.question_id where sqa.question_id = #{questionId} and sqa.user_id = #{logUserId} and sq.type = 1
+	</select>
+
+	<!-- 查询多选对应的答案 -->
+	<select id="getCheckAnswers" resultType="java.util.Map"
+	parameterType="java.util.Map"  >
+	select sqa.option_id FROM task_question_answer sqa
+	JOIN task_question sq ON sqa.question_id=sq.id
+	where
+	sqa.question_id=#{questionId} and sqa.user_id=#{logUserId}  and sq.type=2
+	</select>
+
+	<!-- 查询填空对应的答案 -->
+	<select id="getInpAnswers" resultType="map"
+	parameterType="map">
+	select
+	a.option_content,a.attachment FROM task_question_answer a
+	where
+	a.question_id=#{questionId} and a.user_id=#{logUserId}
+	</select>
+
+	<!-- 保存单选答案 -->
+	<insert id="saveRadioAnswer" parameterType="map">
+		insert into task_question_answer(
+		user_id,question_id,option_id,task_id,answer_type)
+		values(#{userId},#{questionId},#{optionId},#{surveyId},#{answer_type})
+	</insert>
+
+	<!-- 保存多选答案 -->
+	<insert id="saveCheckboxAnswer" parameterType="map">
+		INSERT INTO
+		`task_question_answer`(`user_id`,`question_id`,`option_id`,`task_id`,answer_type)
+		VALUES
+		<foreach collection="optionIds" item="optionId" index="index" separator=",">
+			( #{userId},#{questionId},#{optionId},#{surveyId},#{answer_type})
+		</foreach>
+	</insert>
+
+	<!-- 保存输入框答案 -->
+	<insert id="saveInputAnswer" parameterType="map">
+		insert into task_question_answer
+		(user_id,question_id,option_content,task_id,answer_type
+		<if test="attachment !=null and attachment !=''">
+			,attachment
+		</if>
+		)
+		values(#{userId},#{questionId},#{inputValue},#{surveyId},#{answer_type}
+		<if test="attachment !=null and attachment !=''">
+			,#{attachment}
+		</if>
+		)
+	</insert>
+
+</mapper>

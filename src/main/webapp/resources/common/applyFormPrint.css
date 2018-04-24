@@ -1,0 +1,24 @@
+
+td{
+	border:1px black solid;
+	height:13mm;
+}
+span1{
+	text-align:center;
+	padding:1mm;
+	width: 100%;
+ 			display: block;
+ 			font-weight:bold;
+}
+span2{
+	text-align:center;
+	padding:1mm;
+	width: 100%;
+ 			display: block;
+}
+print_div{
+	width:251mm;height:147mm;border:0.1mm solid;
+}
+#innerdiv{
+	width: 95%;margin:2.5% 2.5% 2.5% 2.5%;
+}

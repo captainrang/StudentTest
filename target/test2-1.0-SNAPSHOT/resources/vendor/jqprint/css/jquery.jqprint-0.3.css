@@ -1,0 +1,254 @@
+.bill {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 9px
+}
+
+.bill table {
+    table-layout: fixed
+}
+
+.bill tr {
+    height: 12px
+}
+
+.bill tr:nth-of-type(1) {
+    height: 16px
+}
+
+.bill tr:nth-of-type(1) td {
+    text-align: center;
+    font-size: 10px
+}
+
+.bill td {
+    width: 25%;
+    text-align: left
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.bill2 {
+    width: 301px;
+    margin: 0 auto;
+    color: #000;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.bill2 .b-header {
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    margin: 40px 0 30px 0
+}
+
+.bill2 .solid-line {
+    border: 1px solid #000;
+    width: 100%
+}
+
+.bill2 .dotted-line {
+    width: 100%;
+    border: 1px dotted #000
+}
+
+.bill2 .b-user {
+    padding-bottom: 12px
+}
+
+.bill2 .b-unit {
+    height: 18px;
+    line-height: 18px;
+    margin-top: 14px;
+    font-size: 16px
+}
+
+.bill2 .b-item {
+    font-size: 18px;
+    min-height: 68px;
+    padding: 10px 0;
+    position: relative
+}
+
+.bill2 .b-item:after {
+    content: "";
+    clear: both
+}
+
+.bill2 .b-item .dotted-line {
+    position: absolute
+}
+
+.bill2 .b-item .dotted-line.bd-top {
+    top: 0
+}
+
+.bill2 .b-item .dotted-line.bd-bottom {
+    bottom: 0;
+    display: none
+}
+
+.bill2 .b-item:nth-last-of-type(1) .dotted-line.bd-bottom {
+    bottom: 0;
+    display: block
+}
+
+.bill2 .b-item .item-left {
+    display: inline-block;
+    width: 65%
+}
+
+.bill2 .b-item .item-right {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+    float: right
+}
+
+.bill2 .b-money {
+    margin-top: 25px;
+    padding-bottom: 28px
+}
+
+.bill2 .b-address {
+    margin-top: 9px
+}
+
+.bill2 .welcome {
+    margin-top: 28px;
+    font-size: 25px;
+    color: #000;
+    text-align: center;
+    font-weight: 700
+}
+
+.bill3 {
+    width: 301px;
+    margin: 0 auto;
+    color: #000;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.bill3 .b-header {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin: 45px 0 30px 0
+}
+
+.bill3 p.time {
+    margin-top: 17px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    text-align: center
+}
+
+.bill3 .solid-line {
+    border: 1px solid #000;
+    width: 100%
+}
+
+.bill3 .dotted-line {
+    border: 1px dotted #000;
+    display: block
+}
+
+.bill3 .b-user {
+    padding-bottom: 12px
+}
+
+.bill3 .b-unit {
+    height: 18px;
+    line-height: 18px;
+    margin-top: 14px;
+    font-size: 16px
+}
+
+.bill3 .b-byj {
+    float: right
+}
+
+.bill3 .b-left {
+    float: left
+}
+
+.bill3 .b-right {
+    float: right
+}
+
+.bill3 .zhifu {
+    margin-top: 24px;
+    margin-bottom: 24px
+}
+
+.bill3 .zf-item {
+    font-size: 18px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    padding: 0 14px
+}
+
+.bill3 .zf-item:after {
+    content: "";
+    clear: both
+}
+
+.bill3 .zf-item .dotted-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+
+.bill3 .zf-item:nth-last-of-type(1) .dotted-line.bd-bottom {
+    bottom: 0;
+    display: block
+}
+
+.bill3 .zf-item .item-left {
+    display: inline-block;
+    width: 65%
+}
+
+.bill3 .zf-item .item-right {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+    float: right
+}
+
+.bill3 .b-total {
+    margin-top: 30px;
+    height: 121px
+}
+
+.bill3 .b-total:after {
+    content: "";
+    clear: both
+}
+
+.bill3 .b-total div:nth-of-type(1) {
+    width: 50%
+}
+
+.bill3 .b-total div:nth-of-type(2) {
+    width: 50%
+}
+
+.bill3 .b-total .mingmu {
+    font-size: 15px
+}
+
+.bill3 .b-total .m-val {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center
+}
