@@ -63,7 +63,7 @@ public class MsgController {
 		String password = request.getParameter("password");
 		Map<String, Object> user = userService.getUserInfo(username, usertype,password);
 		if (user == null) {
-			response.sendRedirect(request.getContextPath() + "/pages/login.jsp?" + "&msg=username is not exist");
+			response.sendRedirect(request.getContextPath() + "/user/initTest.action");
 			return;
 		}
 

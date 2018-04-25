@@ -55,9 +55,11 @@ public interface UserDao {
 
     List<Map<String,Object>> getTeacherByClassId(@Param("classId") String classId);
 
-    List<Map<String,Object>> queryPaiMingTail(@Param("testId") String testId);
+    List<Map<String,Object>> queryPaiMingTail(Map<String,Object> map);
 
-    List<Map<String,Object>> getUserTestInfo(@Param("testId") String testId);
+    int queryPaiMingTailCount(Map<String,Object> map);
+
+    List<Map<String,Object>> getUserTestInfo(Map<String,Object> map);
 
     boolean testNotEnd(@Param("testId") String testId);
 
@@ -70,4 +72,11 @@ public interface UserDao {
     Long getQuestionGrade(Map<String, Object> paraMap);
 
     void insertGrade(Map<String, Object> paraMap);
+
+    /**
+     *
+     * @param testId
+     * @return
+     */
+    int getUserTestInfoCount(Map<String,Object> map);
 }

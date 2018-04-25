@@ -2,6 +2,7 @@ package com.classTest.student.controller;
 
 import com.classTest.student.service.UserService;
 import com.classTest.util.Const;
+import com.classTest.util.PageResultForBootstrap;
 import com.classTest.webSocket.controller.BaseController;
 import com.classTest.webSocket.ws.MyWebSocketHandler;
 import com.google.gson.GsonBuilder;
@@ -21,6 +22,7 @@ import org.springframework.web.socket.TextMessage;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
@@ -39,9 +41,11 @@ public class UserController extends BaseController {
     @Resource
     MyWebSocketHandler handler;
 
+
     @RequestMapping(value = "/initTest")
     public ModelAndView initTest(HttpServletRequest request) {
         ModelAndView model = new ModelAndView();
+        model.addObject("msg",request.getParameter("msg"));
         model.setViewName("login");
         return model;
     }
@@ -96,7 +100,7 @@ public class UserController extends BaseController {
         try {
             Long count = useService.isnotSign(map.get("id").toString());
             if (count > 0) {
-
+                flag = "今日已签到";
             } else {
                 useService.signed(map.get("id").toString());
             }
@@ -222,7 +226,7 @@ public class UserController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "/createTestPaper")
+    @RequestMapping(value = "/createTestPaper" )
     public ModelAndView createTestPaper(HttpServletRequest request) {
         ModelAndView model = new ModelAndView();
         String newTestId = request.getParameter("newTestId");
@@ -304,7 +308,7 @@ public class UserController extends BaseController {
     // 填写问卷答案
     @RequestMapping(value = "/addSurveyAnswers", method = RequestMethod.POST)
     @ResponseBody
-    public String addSurveyAnswers(HttpServletRequest request, @RequestParam("file") MultipartFile[] file) {
+    public void addSurveyAnswers(HttpServletRequest request, HttpServletResponse response, @RequestParam("file") MultipartFile[] file) {
         Map<String, Object> writerUser = this.getUserInfo();
         String flag = "ok";
         Long userId = new Long(String.valueOf(writerUser.get("id")));
@@ -393,7 +397,7 @@ public class UserController extends BaseController {
             String textValues[] = request.getParameterValues("textValues");
             // 输入框问题id集合
             String[] textQuestionIds = request.getParameterValues("textQuestionIds");
-            String path = "E:/upload/";
+            String path = request.getServletContext().getRealPath("/");
             if (null != textQuestionIds) {
                 for (int x = 0; x < textQuestionIds.length; x++) {
                     map3.put("questionId", textQuestionIds[x]);
@@ -443,17 +447,24 @@ public class UserController extends BaseController {
                 mapMessage.put("newTestId", newTestId);
                 handler.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(mapMessage)));
             }
+            response.sendRedirect(request.getContextPath() + "/user/homePage.action");
+            return;
 
         } catch (Exception e) {
             e.printStackTrace();
             flag = "error";
-            return flag;
+           // return flag;
         }
 
 
-        return flag;
     }
 
+
+    /**
+     * 进入当前已完成的测试的列表页面
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/showTaskTest", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showTaskTest(HttpServletRequest request) {
@@ -464,13 +475,25 @@ public class UserController extends BaseController {
         return model;
     }
 
+    /**
+     * 获取当前 已考试完学生的列表数据
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/getUserTestInfo")
     @ResponseBody
-    public List<Map<String, Object>> getUserTestInfo(HttpServletRequest request) {
-        String testId = request.getParameter("taskId");
-        return useService.getUserTestInfo(testId);
+    public PageResultForBootstrap<Map<String, Object>> getUserTestInfo(HttpServletRequest request) {
+        Map<String,Object> map = this.getParamMapFromResult(request);
+        map.put("startnum",(Integer.parseInt(map.get("curPage").toString())-1)*(Integer.parseInt(map.get("pageSize").toString())));
+        map.put("pageSize",Integer.parseInt(map.get("pageSize").toString()));
+        return useService.getUserTestInfo(map);
     }
 
+    /**
+     * 审阅操作 给学生的题目打分
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/shenyue")
     @ResponseBody
     public ModelAndView shenyue(HttpServletRequest request) {
@@ -545,6 +568,12 @@ public class UserController extends BaseController {
         return model;
     }
 
+    /**
+     * 保存文件的方法
+     * @param file
+     * @param path
+     * @return
+     */
     private boolean saveFile(MultipartFile file, String path) {
         // 判断文件是否为空
         if (!file.isEmpty()) {
@@ -564,6 +593,11 @@ public class UserController extends BaseController {
         return false;
     }
 
+    /**
+     * 查看当前学生的排名成绩__校验 考试是否结束，老师是否已经完成审阅功能 给分
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/paiming")
     @ResponseBody
     public String paiming(HttpServletRequest request) {
@@ -579,6 +613,11 @@ public class UserController extends BaseController {
         return flag;
     }
 
+    /**
+     * 查询排名 成绩 并进入页面
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/queryPaiMing")
     @ResponseBody
     public ModelAndView queryPaiMing(HttpServletRequest request) {
@@ -598,15 +637,22 @@ public class UserController extends BaseController {
         return model;
     }
 
+    /**
+     * 排名列表数据
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/queryPaiMingTail")
     @ResponseBody
-    public List<Map<String, Object>> queryPaiMingTail(HttpServletRequest request) {
-        String testId = request.getParameter("testId");
-        return useService.queryPaiMingTail(testId);
+    public PageResultForBootstrap<Map<String, Object>> queryPaiMingTail(HttpServletRequest request) {
+        Map<String,Object> map = this.getParamMapFromResult(request);
+        map.put("startnum",(Integer.parseInt(map.get("curPage").toString())-1)*(Integer.parseInt(map.get("pageSize").toString())));
+        map.put("pageSize",Integer.parseInt(map.get("pageSize").toString()));
+        return useService.queryPaiMingTail(map);
     }
 
     /**
-     * 添加分数
+     *  老师审阅页面点击提交---系统计算分数并添加到分数表中
      *
      * @param request
      * @return
@@ -622,11 +668,11 @@ public class UserController extends BaseController {
         paraMap.put("teacherId", map.get("id"));
         paraMap.put("stuId",stuId);
         paraMap.put("testId",newTestId);
-        String[] grades = request.getParameterValues("textsocreValues");
+        String[] grades = request.getParameterValues("input_soce_4");
         Long gradeTotal = Long.valueOf(0);//统计分数
         for(int i =0;i<grades.length;i++){
-            String grade1 = request.getParameter(grades[i]);
-            gradeTotal += Long.parseLong(grade1);
+            //String grade1 = request.getParameter(grades[i]);
+            gradeTotal += Long.parseLong(grades[i]);
         }
 
         Long questionGrade = useService.getQuestionGrade(paraMap);

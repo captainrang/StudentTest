@@ -1,5 +1,7 @@
 package com.classTest.student.service;
 
+import com.classTest.util.PageResultForBootstrap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -51,9 +53,9 @@ public interface UserService {
 
     List<Map<String,Object>> getTeacherByClassId(String classId);
 
-    List<Map<String,Object>> queryPaiMingTail(String testId);
+    PageResultForBootstrap<Map<String,Object>> queryPaiMingTail(Map<String, Object> paraMap);
 
-    List<Map<String,Object>> getUserTestInfo(String testId);
+    PageResultForBootstrap<Map<String,Object>> getUserTestInfo(Map<String,Object> param);
 
     boolean testNotEnd(String testId);
 

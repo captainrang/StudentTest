@@ -22,6 +22,20 @@
     <select id="queryTest" resultType="map">
         select id,title from task_type where end_date &lt; now()
     </select>
+	<!-- > DATE_ADD(
+	str_to_date(
+	DATE_FORMAT(NOW(), '%Y-%m-%d'),
+	'%Y-%m-%d %H:%i:%s'
+	),
+	INTERVAL (
+	SELECT
+	classTime
+	FROM
+	class cs
+	WHERE
+	cs.id = #{classId}
+	) HOUR
+	)-->
     <select id="tj" resultType="map">
        SELECT
 	t.reached,
@@ -39,25 +53,12 @@ FROM
 		SELECT
 			count(1) targetReach,
 			count(
-				sed.gmt_create > DATE_ADD(
-					str_to_date(
-						DATE_FORMAT(NOW(), '%Y-%m-%d'),
-						'%Y-%m-%d %H:%i:%s'
-					),
-					INTERVAL (
-						SELECT
-							classTime
-						FROM
-							class cs
-						WHERE
-							cs.id = #{classId}
-					) HOUR
-				)
+				sed.gmt_create
 			) AS reached
 		FROM
 			student s
 		JOIN user_class uc ON uc.userId = s.id and uc.type = 0
-		LEFT JOIN signed sed ON sed.stuId = s.id
+		LEFT JOIN signed sed ON sed.stuId = s.id and date_format(sed.gmt_create,'%Y-%m-%d') = CURDATE()
 		WHERE
 			1 = 1
 		AND uc.classId = #{classId}
@@ -156,8 +157,174 @@ FROM
 	<!-- 保存输入框答案 -->
 	<insert id="saveInputAnswer" parameterType="map">
 		insert into task_question_answer
-		(user_id,question_id,option_content,task_id,answer_type)
-		values(#{userId},#{questionId},#{inputValue},#{surveyId},#{answer_type})
+		(user_id,question_id,option_content,task_id,answer_type
+		<if test="attachment !=null and attachment !=''">
+			,attachment
+		</if>
+		)
+		values(#{userId},#{questionId},#{inputValue},#{surveyId},#{answer_type}
+		<if test="attachment !=null and attachment !=''">
+			,#{attachment}
+		</if>
+		)
+	</insert>
+
+	<select id="getTeacherByClassId" resultType="map">
+			select t1.* from teacher t1 left join user_class t2  on t1.id = t2.userId and type = 1
+			where t2.classId = #{classId}
+	</select>
+
+	<select id="testNotEnd" resultType="boolean">
+		SELECT
+			CASE
+		WHEN now() &lt;
+
+		end_date THEN
+			TRUE
+		ELSE
+			FALSE
+		END AS result
+		FROM
+			task_type
+		WHERE
+			id = #{testId}
+	</select>
+
+	<select id="testNotShenYue" resultType="boolean">
+		SELECT
+			count(t1.student_id) &lt;
+
+		count(t2.user_id)
+		FROM
+			grade t1,
+			task_question_answer t2
+		WHERE
+			t2.answer_type = 1
+		AND t1.test_id = #{testId} and t2.task_id = #{testId}
+	</select>
+
+	<select id="queryPaiMingTail" resultType="map" parameterType="map">
+		SELECT
+			t1.grade,
+			t2.realname AS studentName,
+			t3.title
+		FROM
+			grade t1
+		LEFT JOIN student t2 ON t1.student_id = t2.id,
+		 task_type t3
+		WHERE
+			t1.test_id = #{taskId} and t3.id=#{taskId}
+			limit #{startnum},#{pageSize}
+		</select>
+
+	<select id="queryPaiMingTailCount" resultType="java.lang.Integer" parameterType="map">
+		SELECT
+			count(1)
+		FROM
+			grade t1
+		LEFT JOIN student t2 ON t1.student_id = t2.id,
+		 task_type t3
+		WHERE
+			t1.test_id = #{taskId} and t3.id=#{taskId}
+	</select>
+	<select id="getUserTestInfo" resultType="map" parameterType="map">
+		SELECT
+		t2.id as stuId,
+			t2.realname AS studentName,
+			cs.NAME AS className,
+			t3.title AS testName
+		FROM
+			task_question_answer t1
+		LEFT JOIN student t2 ON t1.user_id = t2.id
+		JOIN user_class uc ON t2.id = uc.userId
+		AND type = 0
+		JOIN class cs ON cs.id = uc.classId,
+		 task_type t3
+		WHERE
+			t3.id = #{taskId} and t1.task_id = #{taskId}
+			limit #{startnum},#{pageSize}
+	</select>
+	<select id="getUserTestInfoCount" resultType="java.lang.Integer" parameterType="map">
+		SELECT
+		count(1)
+		FROM
+		task_question_answer t1
+		LEFT JOIN student t2 ON t1.user_id = t2.id
+		JOIN user_class uc ON t2.id = uc.userId
+		AND type = 0
+		JOIN class cs ON cs.id = uc.classId,
+		task_type t3
+		WHERE
+		t3.id = #{taskId} and t1.task_id = #{taskId}
+	</select>
+
+	<select id="getDTL" resultType="map">
+		SELECT count(t1.user_id)/count(t2.userId) from task_question_answer t1,(select * from user_class where type = 0 )t2
+		where  t2.classId = (select classId from user_class t3 where type = 1 and t3.userId = #{userId})
+	</select>
+
+
+	<select id="getZQL" resultType="map">
+
+	</select>
+
+	<select id="getQuestionGrade" resultType="java.lang.Long" parameterType="map">
+		SELECT
+			sum(grade) grade
+		FROM
+			(
+				SELECT
+					CASE
+				WHEN t3.answer_type = 1 THEN
+					count(t3.option_id = t4.option_id) * 5
+				WHEN t3.answer_type = 2 THEN
+					count(
+						t3.option_content = t4.option_content
+					) * 10
+				ELSE
+					count(
+						t3.option_content = t4.option_content
+					) * 15
+				END AS grade
+				FROM
+					(
+						SELECT
+							TRIM(t1.option_id) AS option_id,
+							t1.question_id,
+							t1.answer_type,
+							t1.user_id,
+							TRIM(t1.option_content) AS option_content
+						FROM
+							task_question_answer t1
+						LEFT JOIN task_question tq1 ON t1.question_id = tq1.id
+						AND tq1.type = 1
+						AND t1.answer_type IN (1, 2, 4)
+						AND t1.task_id = #{testId}
+						and t1.user_id = #{stuId}
+					) t3
+				LEFT JOIN (
+					SELECT
+						TRIM(t2.option_id) AS option_id,
+						t2.question_id,
+						t2.answer_type,
+						t2.user_id,
+						TRIM(t2.option_content) AS option_content
+					FROM
+						task_question_answer t2
+					LEFT JOIN task_question tq2 ON t2.question_id = tq2.id
+					AND tq2.type = 1
+					AND t2.answer_type IN (1, 2, 4)
+					AND t1.task_id = #{testId}
+					and t1.user_id = #{teacherId}
+				) t4 ON t3.question_id = t4.question_id
+				AND t3.answer_type != t4.answer_type
+				AND t3.user_id != t4.user_id
+
+			) t
+	</select>
+
+	<insert id="insertGrade" parameterType="map">
+		INSERT into grade(test_id,student_id,grade,teacher_id) VALUES(#{testId},#{stuId},#{grade},#{teacherId})
 	</insert>
 
 </mapper>

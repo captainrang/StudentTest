@@ -117,14 +117,15 @@
         <%--var fromName='${name}';--%>
         <%--var to=uid==1?2:1;--%>
         var uid= '${uid}';
+        var userType = '${SESSION_USER_CONST_TYPE}';
 
         var websocket;
         if ('WebSocket' in window) {
             websocket = new WebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else if ('MozWebSocket' in window) {
-            websocket = new MozWebSocket("ws://" + path + "/ws.action"+uid);
+            websocket = new MozWebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else {
-            websocket = new SockJS("http://" + path + "/ws/sockjs.action"+uid);
+            websocket = new SockJS("http://" + path + "/ws/sockjs.action?uid="+uid);
         }
         websocket.onopen = function(event) {
             console.log("WebSocket:已连接");
@@ -133,7 +134,13 @@
         websocket.onmessage = function(event) {
             var data=JSON.parse(event.data);
             console.log("WebSocket:收到一条消息",data);
-            var html = "  <a class=\"btm-text\" href=\"#\" onclick=\"location.href='"+contextpath+"/user/testPapering.action?newTestId="+data.newTestId+"'\">"+data.title+"</a>";
+            var html = '';
+            if(userType==1){
+                html = "  <a class=\"btm-text\" href=\"#\" onclick=\"location.href='"+contextpath+"/user/createTestPaper.action?newTestId="+data.newTestId+"'\">"+data.title+"</a>";
+
+            }else{
+                html = ' <p><span class="td1">:</span>&nbsp;&nbsp;<a href="${ctx}/user/showTaskTest.action?taskId='+data.newTestId+'">'+data.title+'</a></p>\n';
+            }
             $(".btm-tips").append(html);
             recevice();
 
@@ -171,8 +178,10 @@
             <p><span class="td1">当前到课情况:</span>&nbsp;&nbsp;<span >应到${tj.targetReach}人&nbsp;&nbsp;实到${tj.reached}人 </span><span class="td1">到课率为：</span><span>${tj.reachpercent}</span></p>
             <p><span class="td1">当前登录人:</span>&nbsp;&nbsp;<span >${SESSION_USER_CONST_TEACHER.realname}</span></p>
             <p><span class="td1">当前所在班级:</span>&nbsp;&nbsp;<span>${SESSION_USER_CONST_TEACHER.className}</span></p>
-            <p><span class="td1">最新测试:</span>&nbsp;&nbsp;<a href="${ctx}/user/showTaskTest.action?taskId=${taskTest.id}">${taskTest.title}</a></p>
             <p><span class="td1">操作:</span >&nbsp;&nbsp;<a  class="btnSubmit" id="btnSubmit" onclick="fbTest()">发布测试</a></p>
+            <p><span class="td1">操作:</span >&nbsp;&nbsp;<a  class="btnSubmit" id="stopTest" onclick="stopTest()">停止测试</a></p>
+            <div class="btm-tips">
+            </div>
             <%--<c:if test="${IS_READED>0}">--%>
                 <%--<div class="btm-tips">--%>
                     <%--<c:forEach var="item" items="list_read_test">--%>

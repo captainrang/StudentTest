@@ -123,9 +123,9 @@
         if ('WebSocket' in window) {
             websocket = new WebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else if ('MozWebSocket' in window) {
-            websocket = new MozWebSocket("ws://" + path + "/ws.action"+uid);
+            websocket = new MozWebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else {
-            websocket = new SockJS("http://" + path + "/ws/sockjs.action"+uid);
+            websocket = new SockJS("http://" + path + "/ws/sockjs.action?uid="+uid);
         }
         websocket.onopen = function(event) {
             console.log("WebSocket:已连接");
@@ -136,7 +136,7 @@
             console.log("WebSocket:收到一条消息",data);
             var html = '';
             if(userType==1){
-                html = "  <a class=\"btm-text\" href=\"#\" onclick=\"location.href='"+contextpath+"/user/testPapering.action?newTestId="+data.newTestId+"'\">"+data.title+"</a>";
+                html = "  <a class=\"btm-text\" href=\"#\" onclick=\"location.href='"+contextpath+"/user/createTestPaper.action?newTestId="+data.newTestId+"'\">"+data.title+"</a>";
 
             }else{
                 html = ' <p><span class="td1">:</span>&nbsp;&nbsp;<a href="${ctx}/user/showTaskTest.action?taskId='+data.newTestId+'">'+data.title+'</a></p>\n';

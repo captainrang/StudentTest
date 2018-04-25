@@ -1,6 +1,6 @@
 $(function() {
     //渐入渐出
-    recevice();
+    //recevice();
 
 
 
@@ -47,10 +47,13 @@ function sign() {
         success: function (json) {
             if (json == "ok") {
                 $("#sign").attr("disabled", true);
+                $("#sign").attr("onclick", "");
                 $("#sign").css({"background-color":"#f2f2f2"});
                 alert("签到成功");
-            } else {
+            } else if(json=="error") {
                 alert("签到失败");
+            }else{
+                alert("今日已完成签到");
             }
 
         }

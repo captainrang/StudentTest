@@ -2,6 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.classTest.util.Const" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getServerName() + ":"
+            + request.getServerPort() + path + "/";
+    String basePath2 = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
 
 <!DOCTYPE html>
 <html>
@@ -141,13 +149,12 @@
             border: solid 1px #d8d8d8
         }
         .buttonDiv{
-            cursor:pointer;
-            margin-left:530px;
+            cursor: pointer;
+            margin-left: 530px;
             width: 140px;
             height: 28px;
             background-color: #6FBCC2;
-            border-radius:4px;
-            padding-top: 4px;
+            border-radius: 4px;
 
         }
 
@@ -172,14 +179,15 @@
         }
     </style>
     <script>
+        var path = '<%=basePath%>';
         var uid='${uid}';
         var websocket;
         if ('WebSocket' in window) {
-            websocket = new WebSocket("ws://" + contextpath + "/ws.action?uid="+uid);
+            websocket = new WebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else if ('MozWebSocket' in window) {
-            websocket = new MozWebSocket("ws://" + contextpath + "/ws.action"+uid);
+            websocket = new MozWebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else {
-            websocket = new SockJS("http://" + contextpath + "/ws/sockjs.action"+uid);
+            websocket = new SockJS("http://" + path + "/ws/sockjs.action?uid="+uid);
         }
         websocket.onopen = function(event) {
             console.log("WebSocket:已连接");
@@ -198,20 +206,21 @@
             var data=JSON.parse(event.data);
             console.log("WebSocket:收到一条消息",data);
             if(data.title=='stop'){
-                alert("时间到，结束,5s后自动跳转主页!");
-                $(".submitFont").hide();
+
+                alert("时间到，结束,5s后自动跳转主页!"+data.title);
+              /*  $(".submitFont").hide();
                 setTimeout(function(){
                         toList();
                     }
-                ,5000)
+                ,5000)*/
             }
            // recevice();
 
         };
         var userType = '${ SESSION_USER_CONST_TYPE}';
         if(userType==1){
-            var timeM = '${mapSurvey.end_date}';
-            var maxtime = timeM * 60; //一个小时，按秒计算，自己调整!
+            var timeM = '${mapSurvey.testTime}';
+            var maxtime = parseInt(timeM) * 60; //一个小时，按秒计算，自己调整!
             function CountDown() {
                 if (maxtime >= 0) {
                     minutes = Math.floor(maxtime / 60);
@@ -223,11 +232,11 @@
                 } else{
                     clearInterval(timer);
                     alert("时间到，结束,5s后自动跳转主页!");
-                    $(".submitFont").hide();
+                    /*$(".submitFont").hide();
                     setTimeout(function(){
                             toList();
                         }
-                        ,5000)
+                        ,5000)*/
                 }
             }
             timer = setInterval("CountDown()", 1000);
@@ -258,7 +267,7 @@
                     </div>
                 </c:if>
 
-                <form id="contentForm">
+                <form id="contentForm" enctype='multipart/form-data' method="post" action="${ctx}/user/addSurveyAnswers.action" >
                     <div class="questions">
                         <input type="hidden" name="newTestId" value="${newTestId}">
                         <c:choose>
@@ -326,7 +335,7 @@
                                                 <c:if test="${SESSION_USER_CONST_TYPE==1 }">
                                                 <div class="sxy-div-content upload-image">
                                             <span>上传:</span>
-                                                <div class="fileinfo"><input type="file" name="uploadFile"></div>
+                                                <div class="fileinfo"><input type="file" name="file"></div>
                                             </div>
                                             </c:if>
                                             </p>
@@ -343,15 +352,16 @@
                             </c:when>
                         </c:choose>
                     </div>
+                    <div style="width: 100%;height:50px;padding-top: 60px;"> <%--onclick="submit1('${ SESSION_USER_CONST_TYPE}')"--%>
+                        <button type=""  class="buttonDiv submitFont">
+                            ${ SESSION_USER_CONST_TYPE==1?'提交试卷':'发布试卷'}
+                        </button>
+                    </div>
                 </form>
             </div>
 
 
-                    <div style="text-align: center;width: 100%;height:50px;">
-                        <div onclick="submit1('${ SESSION_USER_CONST_TYPE}')" class="buttonDiv">
-                            <input type="submit" class="submitFont">${ SESSION_USER_CONST_TYPE==1?'提交试卷':'发布试卷'}</input>
-                        </div>
-                    </div>
+
 
 
         </div>

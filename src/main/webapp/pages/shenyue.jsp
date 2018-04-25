@@ -171,72 +171,6 @@
              z-index: 999;*/
         }
     </style>
-    <script>
-        var uid='${uid}';
-        var websocket;
-        if ('WebSocket' in window) {
-            websocket = new WebSocket("ws://" + contextpath + "/ws.action?uid="+uid);
-        } else if ('MozWebSocket' in window) {
-            websocket = new MozWebSocket("ws://" + contextpath + "/ws.action"+uid);
-        } else {
-            websocket = new SockJS("http://" + contextpath + "/ws/sockjs.action"+uid);
-        }
-        websocket.onopen = function(event) {
-            console.log("WebSocket:已连接");
-            console.log(event);
-        };
-        websocket.onerror = function(event) {
-            console.log("WebSocket:发生错误 ");
-            console.log(event);
-        };
-        websocket.onclose = function(event) {
-            console.log("WebSocket:已关闭");
-            console.log(event);
-        }
-
-        websocket.onmessage = function(event) {
-            var data=JSON.parse(event.data);
-            console.log("WebSocket:收到一条消息",data);
-            if(data.title=='stop'){
-                alert("时间到，结束,5s后自动跳转主页!");
-                $(".submitFont").hide();
-                setTimeout(function(){
-                        toList();
-                    }
-                ,5000)
-            }
-           // recevice();
-
-        };
-        var userType = '${ SESSION_USER_CONST_TYPE}';
-        if(userType==1){
-            var timeM = '${mapSurvey.end_date}';
-            var maxtime = timeM * 60; //一个小时，按秒计算，自己调整!
-            function CountDown() {
-                if (maxtime >= 0) {
-                    minutes = Math.floor(maxtime / 60);
-                    seconds = Math.floor(maxtime % 60);
-                    msg = "距离结束还有" + minutes + "分" + seconds + "秒";
-                    document.all["timer"].innerHTML = msg;
-                    if (maxtime == 5 * 60)alert("还剩5分钟");
-                    --maxtime;
-                } else{
-                    clearInterval(timer);
-                    alert("时间到，结束,5s后自动跳转主页!");
-                    $(".submitFont").hide();
-                    setTimeout(function(){
-                            toList();
-                        }
-                        ,5000)
-                }
-            }
-            timer = setInterval("CountDown()", 1000);
-        }
-
-        function toList(){
-            window.location.href=contextpath+"/user/homePage.action";
-        }
-    </script>
 
 
 </head>
@@ -252,13 +186,7 @@
                 <span class="titleFont">${mapSurvey.title}</span>
             </div>
             <div class="bigContent">
-                <c:if test="${ SESSION_USER_CONST_TYPE==1}" >
-                    <div class="tipDiv">
 
-                        <%--<div id="warring" style="color:red"></div>--%>
-                        <span class="tipFont">本次考试结束时间为${mapSurvey.end_date},请各位同学注意时间</span>
-                    </div>
-                </c:if>
 
                 <form id="contentForm">
                     <div class="questions">
@@ -271,7 +199,7 @@
 
                                     <c:if test="${question.type==5}">
                                         <div class="oneQuestion q5">
-                                            <p>Q${code.index+1} : ${question.title}&nbsp; <span>上传:</span>
+                                            <p>Q${code.index+1} : ${question.title}&nbsp; <span onclick="showImage()">查看:</span>
                                             </p>
                                             <div style="padding-left: 22px">
                                                 <textarea id="${question.id}" name="input_${code.index+1}" class="textAreaStyle" maxlength="190" >${question.inp }</textarea><br/>
@@ -295,7 +223,7 @@
 
                     <div style="text-align: center;width: 100%;height:50px;">
                         <div onclick="submit1()" class="buttonDiv">
-                            <input type="submit" class="submitFont">提交</input>
+                            <span type="submit" class="submitFont">提交</span>
                         </div>
                     </div>
 
@@ -318,10 +246,12 @@
             });
         }
     }
-
+    function toList(){
+        window.location.href=contextpath+"/user/homePage.action";
+    }
     function submit1() {
         $.ajax({
-            url:contextpath+"/user/testResult.aciotn?testId="+$("#newTestId").val(),
+            url:contextpath+"/user/testResult.action?testId="+$("#newTestId").val(),
             type:'get',
             success:function(json){
                 if(json=='ok'){

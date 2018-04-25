@@ -2,6 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.classTest.util.Const" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getServerName() + ":"
+            + request.getServerPort() + path + "/";
+    String basePath2 = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
 
 <!DOCTYPE html>
 <html>
@@ -141,13 +149,12 @@
             border: solid 1px #d8d8d8
         }
         .buttonDiv{
-            cursor:pointer;
-            margin-left:530px;
+            cursor: pointer;
+            margin-left: 530px;
             width: 140px;
             height: 28px;
             background-color: #6FBCC2;
-            border-radius:4px;
-            padding-top: 4px;
+            border-radius: 4px;
 
         }
 
@@ -172,14 +179,15 @@
         }
     </style>
     <script>
+        var path = '<%=basePath%>';
         var uid='${uid}';
         var websocket;
         if ('WebSocket' in window) {
-            websocket = new WebSocket("ws://" + contextpath + "/ws.action?uid="+uid);
+            websocket = new WebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else if ('MozWebSocket' in window) {
-            websocket = new MozWebSocket("ws://" + contextpath + "/ws.action"+uid);
+            websocket = new MozWebSocket("ws://" + path + "/ws.action?uid="+uid);
         } else {
-            websocket = new SockJS("http://" + contextpath + "/ws/sockjs.action"+uid);
+            websocket = new SockJS("http://" + path + "/ws/sockjs.action?uid="+uid);
         }
         websocket.onopen = function(event) {
             console.log("WebSocket:已连接");
@@ -197,18 +205,54 @@
         websocket.onmessage = function(event) {
             var data=JSON.parse(event.data);
             console.log("WebSocket:收到一条消息",data);
+            if(data.title=='stop'){
 
-            recevice();
+                alert("时间到，结束,5s后自动跳转主页!"+data.title);
+              /*  $(".submitFont").hide();
+                setTimeout(function(){
+                        toList();
+                    }
+                ,5000)*/
+            }
+           // recevice();
 
         };
-
+        var userType = '${ SESSION_USER_CONST_TYPE}';
+        if(userType==1){
+            var timeM = '${mapSurvey.testTime}';
+            var maxtime = parseInt(timeM) * 60; //一个小时，按秒计算，自己调整!
+            function CountDown() {
+                if (maxtime >= 0) {
+                    minutes = Math.floor(maxtime / 60);
+                    seconds = Math.floor(maxtime % 60);
+                    msg = "距离结束还有" + minutes + "分" + seconds + "秒";
+                    document.all["timer"].innerHTML = msg;
+                    if (maxtime == 5 * 60)alert("还剩5分钟");
+                    --maxtime;
+                } else{
+                    clearInterval(timer);
+                    alert("时间到，结束,5s后自动跳转主页!");
+                    /*$(".submitFont").hide();
+                    setTimeout(function(){
+                            toList();
+                        }
+                        ,5000)*/
+                }
+            }
+            timer = setInterval("CountDown()", 1000);
+        }
 
 
     </script>
+
+
 </head>
 <body>
 <div class="body" >
     <div class="content-wrapper">
+        <c:if test="${ SESSION_USER_CONST_TYPE==1}" >
+        <div id="timer" style="color:red"></div>
+        </c:if>
         <div class="emptyDiv"></div>
         <div class="whiteDiv">
             <div class="titleDiv">
@@ -217,11 +261,13 @@
             <div class="bigContent">
                 <c:if test="${ SESSION_USER_CONST_TYPE==1}" >
                     <div class="tipDiv">
+
+                        <%--<div id="warring" style="color:red"></div>--%>
                         <span class="tipFont">本次考试结束时间为${mapSurvey.end_date},请各位同学注意时间</span>
                     </div>
                 </c:if>
 
-                <form id="contentForm">
+                <form id="contentForm" enctype='multipart/form-data' method="post" action="${ctx}/user/addSurveyAnswers.action" >
                     <div class="questions">
                         <input type="hidden" name="newTestId" value="${newTestId}">
                         <c:choose>
@@ -286,9 +332,13 @@
                                     <c:if test="${question.type==5}">
                                         <div class="oneQuestion q5">
                                             <p>Q${code.index+1} : ${question.title}&nbsp;
-                                                <c:if test="${question.attachment !=null&&question.attachment!='' }">
-                                                 <a href="#" onclick="showImage()">查阅</a></p>
-                                                </c:if>
+                                                <c:if test="${SESSION_USER_CONST_TYPE==1 }">
+                                                <div class="sxy-div-content upload-image">
+                                            <span>上传:</span>
+                                                <div class="fileinfo"><input type="file" name="file"></div>
+                                            </div>
+                                            </c:if>
+                                            </p>
                                             <div style="padding-left: 22px">
                                                 <textarea id="${question.id}" name="input_${code.index+1}" class="textAreaStyle" maxlength="190" >${question.inp }</textarea>
                                             </div>
@@ -302,15 +352,16 @@
                             </c:when>
                         </c:choose>
                     </div>
+                    <div style="width: 100%;height:50px;padding-top: 60px;"> <%--onclick="submit1('${ SESSION_USER_CONST_TYPE}')"--%>
+                        <button type=""  class="buttonDiv submitFont">
+                            ${ SESSION_USER_CONST_TYPE==1?'提交试卷':'发布试卷'}
+                        </button>
+                    </div>
                 </form>
             </div>
 
 
-                    <div style="text-align: center;width: 100%;height:50px;">
-                        <div onclick="submit1('${ SESSION_USER_CONST_TYPE}')" class="buttonDiv">
-                            <span class="submitFont">${ SESSION_USER_CONST_TYPE==1?'提交试卷':'发布试卷'}</span>
-                        </div>
-                    </div>
+
 
 
         </div>
@@ -318,19 +369,7 @@
     </div>
 </div>
 <script>
-    function showImage(){
-        if($("#img").complete){
-            layer.open({
-                type: 1,
-                title: false,
-                closeBtn: 1,
-                area: '467px',
-                skin: 'layui-layer-nobg', //没有背景色
-                shadeClose: true,
-                content: $("#bookmistake")
-            });
-        }
-    }
+
     //提交之前 需要老师给出答案 才能发布
     function submit1(){
         var params = $('#contentForm').serializeArray();
@@ -401,6 +440,8 @@
         return flag;
 
     }
+
+
 
 
 

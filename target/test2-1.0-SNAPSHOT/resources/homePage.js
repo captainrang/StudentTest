@@ -1,6 +1,6 @@
 $(function() {
     //渐入渐出
-    recevice();
+    //recevice();
 
 
 
@@ -24,6 +24,21 @@ function recevice(){
         });
     },2000);
 }
+//停止考试 给所有的在线的考生发送消息 终止考试
+function stopTest(){
+    $.ajax({
+        url: contextpath + "/user/stopTest.action",
+        type:"get",
+        success: function (json) {
+            if (json == "ok") {
+                alert("已终止考试");
+            }else{
+                alert("终止失败");
+            }
+        }
+    })
+
+}
 function sign() {
     $.ajax({
         url: contextpath + "/user/signed.action",
@@ -32,10 +47,13 @@ function sign() {
         success: function (json) {
             if (json == "ok") {
                 $("#sign").attr("disabled", true);
+                $("#sign").attr("onclick", "");
                 $("#sign").css({"background-color":"#f2f2f2"});
                 alert("签到成功");
-            } else {
+            } else if(json=="error") {
                 alert("签到失败");
+            }else{
+                alert("今日已完成签到");
             }
 
         }

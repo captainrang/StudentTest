@@ -35,7 +35,7 @@ function LoadinDataTable() {
             }, {
                 title: '操作',
                 formatter: function (value, row, index) {
-                    var n = '<a href="#" onclick="'+row.stuId+'">审阅</a>';
+                    var n = '<a href="#" onclick="shenyue('+row.stuId+')">审阅</a>';
                     return n;
                 }
             }]

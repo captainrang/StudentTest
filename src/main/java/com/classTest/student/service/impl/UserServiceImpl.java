@@ -2,6 +2,7 @@ package com.classTest.student.service.impl;
 
 import com.classTest.student.dao.UserDao;
 import com.classTest.student.service.UserService;
+import com.classTest.util.PageResultForBootstrap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -119,13 +120,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Map<String, Object>> queryPaiMingTail(String testId) {
-        return userDao.queryPaiMingTail(testId);
+    public  PageResultForBootstrap<Map<String,Object>> queryPaiMingTail(Map<String, Object> paraMap) {
+        PageResultForBootstrap<Map<String,Object>> pageBootstrap=new PageResultForBootstrap<Map<String,Object>>();
+        List<Map<String,Object>> list=userDao.queryPaiMingTail(paraMap);
+        int count=userDao.queryPaiMingTailCount(paraMap);
+        pageBootstrap.setRows(list);
+        pageBootstrap.setTotal(count);
+        return pageBootstrap;
     }
 
     @Override
-    public List<Map<String, Object>> getUserTestInfo(String testId) {
-        return userDao.getUserTestInfo(testId);
+    public PageResultForBootstrap<Map<String, Object>> getUserTestInfo(Map<String,Object> param) {
+
+        PageResultForBootstrap<Map<String,Object>> pageBootstrap=new PageResultForBootstrap<Map<String,Object>>();
+        List<Map<String,Object>> list=userDao.getUserTestInfo(param);
+        int count=userDao.getUserTestInfoCount(param);
+        pageBootstrap.setRows(list);
+        pageBootstrap.setTotal(count);
+        return pageBootstrap;
     }
 
     @Override
