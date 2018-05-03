@@ -39,6 +39,10 @@ function stopTest(){
     })
 
 }
+
+function newUser() {
+    window.location.href = contextpath+"/user/addUser.action"
+}
 function sign() {
     $.ajax({
         url: contextpath + "/user/signed.action",

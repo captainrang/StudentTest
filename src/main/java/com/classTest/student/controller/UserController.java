@@ -686,4 +686,54 @@ public class UserController extends BaseController {
         }
         return flag;
     }
+
+
+    /**
+     * 进入新增用户界面
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/addUser")
+    @ResponseBody
+    public ModelAndView addUser(HttpServletRequest request){
+        ModelAndView model = new ModelAndView();
+        List<Map<String,Object>> classList = useService.getClassList();
+        model.addObject("classList",classList);
+        model.setViewName("/addUser");
+        return model;
+    }
+
+    /**
+     * 进入新增用户姓名
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/showUser")
+    @ResponseBody
+    public PageResultForBootstrap<Map<String,Object>> showUser(HttpServletRequest request){
+        return useService.showUser();
+    }
+    /**
+     * 进入新增用户姓名
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/addUserOpt", method = RequestMethod.POST)
+    @ResponseBody
+    public String addUserOpt(HttpServletRequest request){
+        Map<String,Object> param = this.getParamMapFromResult(request);
+        param.put("id",0L);
+        String flag = "OK";
+        try{
+            useService.addUserOpt(param);
+            System.out.println(param.get("id"));
+            useService.insertUserClass(param);
+        }catch (Exception e){
+            flag = "error";
+            e.printStackTrace();
+            return flag;
+        }
+     return flag;
+    }
+
 }

@@ -79,4 +79,12 @@ public interface UserDao {
      * @return
      */
     int getUserTestInfoCount(Map<String,Object> map);
+
+    List<Map<String,Object>> getClassList();
+
+    List<Map<String,Object>> showUser();
+
+    void addUserOpt(Map<String, Object> param);
+
+    void insertUserClass(Map<String, Object> param);
 }

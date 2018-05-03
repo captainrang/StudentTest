@@ -327,4 +327,32 @@ FROM
 		INSERT into grade(test_id,student_id,grade,teacher_id) VALUES(#{testId},#{stuId},#{grade},#{teacherId})
 	</insert>
 
+	<select id="getClassList" resultType="map">
+		select * from class
+	</select>
+
+	<select id="showUser" resultType="map">
+		 select s.username,s.realname ,cs.id as classId,cs.name as classname,'学生' classType
+            from student s join user_class uc on s.id = uc.userId and type = 0  join class cs
+            on cs.id = uc.classId
+            union ALL
+            select s.username ,s.realname,cs.id as classId,cs.name as classname, '老师' classType
+            from teacher s join user_class uc on s.id = uc.userId and type = 1 join class cs
+            on cs.id = uc.classId
+	</select>
+
+	<insert id="addUserOpt" useGeneratedKeys="true"   keyProperty="id" parameterType="map">
+
+		<if test="add_userType == 1">
+			insert into student(sno,realname,username,password,sex) values(#{add_sno},#{add_realname},#{add_username},#{add_password},#{add_sex})
+		</if>
+		<if test="add_userType == 2">
+			insert into teacher(sno,realname,username,password,sex) values(#{add_sno},#{add_realname},#{add_username},#{add_password},#{add_sex})
+		</if>
+	</insert>
+
+	<insert id="insertUserClass" parameterType="map">
+		INSERT into user_class(userId,classId,type) VALUES(#{id},#{add_class},#{add_userType}-1)
+	</insert>
+
 </mapper>

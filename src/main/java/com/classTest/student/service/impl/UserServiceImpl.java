@@ -169,4 +169,29 @@ public class UserServiceImpl implements UserService {
     public void insertGrade(Map<String, Object> paraMap) {
         userDao.insertGrade(paraMap);
     }
+
+    @Override
+    public List<Map<String, Object>> getClassList() {
+        return userDao.getClassList();
+    }
+
+    @Override
+    public PageResultForBootstrap<Map<String, Object>> showUser() {
+        PageResultForBootstrap<Map<String,Object>> pageBootstrap=new PageResultForBootstrap<Map<String,Object>>();
+        List<Map<String,Object>> list= userDao.showUser();
+
+        pageBootstrap.setRows(list);
+        pageBootstrap.setTotal(list.size());
+        return pageBootstrap;
+    }
+
+    @Override
+    public void addUserOpt(Map<String, Object> param) {
+        userDao.addUserOpt(param);
+    }
+
+    @Override
+    public void insertUserClass(Map<String, Object> param) {
+        userDao.insertUserClass(param);
+    }
 }

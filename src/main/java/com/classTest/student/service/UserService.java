@@ -68,4 +68,12 @@ public interface UserService {
     Long getQuestionGrade(Map<String, Object> paraMap);
 
     void insertGrade(Map<String, Object> paraMap);
+
+    List<Map<String,Object>> getClassList();
+
+    PageResultForBootstrap<Map<String,Object>> showUser();
+
+    void addUserOpt(Map<String, Object> param);
+
+    void insertUserClass(Map<String, Object> param);
 }
