@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.classTest.webSocket.controller.BaseController;
 import com.classTest.webSocket.entity.Message;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
@@ -22,7 +23,7 @@ import com.google.gson.GsonBuilder;
  * Created by cyx  on 2018/3/30
  */
 @Component
-public class MyWebSocketHandler implements WebSocketHandler {
+public class MyWebSocketHandler  implements WebSocketHandler {
     public static final Map<Long, WebSocketSession> userSocketSessionMap;
     static {
         userSocketSessionMap = new HashMap<Long, WebSocketSession>();
@@ -104,7 +105,9 @@ public class MyWebSocketHandler implements WebSocketHandler {
                 new Thread(new Runnable() {
                     public void run() {
                         try {
+
                             if (entry.getValue().isOpen()) {
+
                                 entry.getValue().sendMessage(message);
                             }
                         } catch (IOException e) {

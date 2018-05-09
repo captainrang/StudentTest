@@ -228,20 +228,29 @@ FROM
 			t1.test_id = #{taskId} and t3.id=#{taskId}
 	</select>
 	<select id="getUserTestInfo" resultType="map" parameterType="map">
-		SELECT
-		t2.id as stuId,
-			t2.realname AS studentName,
-			cs.NAME AS className,
-			t3.title AS testName
-		FROM
-			task_question_answer t1
-		LEFT JOIN student t2 ON t1.user_id = t2.id
-		JOIN user_class uc ON t2.id = uc.userId
-		AND type = 0
-		JOIN class cs ON cs.id = uc.classId,
-		 task_type t3
-		WHERE
-			t3.id = #{taskId} and t1.task_id = #{taskId}
+	SELECT
+	t2.id AS stuId,
+	t2.realname AS studentName,
+	cs. NAME AS className,
+	t3.title AS testName
+FROM
+	student t2
+JOIN user_class uc ON t2.id = uc.userId
+AND type = 0
+JOIN class cs ON cs.id = uc.classId,
+ task_type t3
+WHERE
+	t3.id = #{taskId}
+AND EXISTS (
+	SELECT
+		t1.id
+	FROM
+		task_question_answer t1
+	WHERE
+		t1.user_id = t2.id
+	AND t1.task_id = #{taskId}
+)
+
 			limit #{startnum},#{pageSize}
 	</select>
 	<select id="getUserTestInfoCount" resultType="java.lang.Integer" parameterType="map">
@@ -259,12 +268,76 @@ FROM
 	</select>
 
 	<select id="getDTL" resultType="map">
-		SELECT count(t1.user_id)/count(t2.userId) from task_question_answer t1,(select * from user_class where type = 0 )t2
+		SELECT (count(t1.user_id)/count(t2.userId))*100 dtl from task_question_answer t1,(select * from user_class where type = 0 )t2
 		where  t2.classId = (select classId from user_class t3 where type = 1 and t3.userId = #{userId})
 	</select>
 
 
 	<select id="getZQL" resultType="map">
+			SELECT
+			(sum(hdquestionCount)/(select count(t5.id) from task_question t5 where t5.task_id = #{testId})*(
+select count(user_id)from
+		(SELECT
+		t6.user_id
+		FROM
+			task_question_answer t6
+		WHERE
+			t6.answer_type = 1
+		AND t6.task_id = #{testId}
+		GROUP BY
+			t6.user_id) t
+	) *100) zql
+		FROM
+			(
+				SELECT
+					CASE
+				WHEN t3.type = 1 THEN
+					count(t3.option_id = t4.option_id)
+				WHEN t3.type = 2 THEN
+
+				if(	GROUP_CONCAT(t3.option_id) = GROUP_CONCAT(t4.option_id),1,0)
+
+				WHEN t3.type = 3 THEN
+					count(
+						t3.option_content = t4.option_content
+					)
+					ELSE 0
+				END AS hdquestionCount
+				FROM
+					(
+						SELECT
+							TRIM(t1.option_id) AS option_id,
+							t1.question_id,
+							tq1.type,
+							t1.user_id,
+							TRIM(t1.option_content) AS option_content
+						FROM
+							task_question_answer t1
+						LEFT JOIN task_question tq1 ON t1.question_id = tq1.id
+						where t1.answer_type  = 1
+						AND tq1.type IN (1, 2, 4)
+						AND t1.task_id = #{testId}
+
+					) t3
+				LEFT JOIN (
+					SELECT
+						TRIM(t2.option_id) AS option_id,
+						t2.question_id,
+						tq2.type,
+						t2.user_id,
+						TRIM(t2.option_content) AS option_content
+					FROM
+						task_question_answer t2
+					LEFT JOIN task_question tq2 ON t2.question_id = tq2.id
+					where t2.answer_type  = 2
+					 AND tq2.type IN (1, 2, 4)
+					AND t2.task_id = #{testId}
+					and t2.user_id = #{userId}
+				) t4 ON t3.question_id = t4.question_id
+				where  t3.user_id != t4.user_id
+
+			) t
+
 
 	</select>
 
@@ -275,50 +348,50 @@ FROM
 			(
 				SELECT
 					CASE
-				WHEN t3.answer_type = 1 THEN
+				WHEN t3.type = 1 THEN
 					count(t3.option_id = t4.option_id) * 5
-				WHEN t3.answer_type = 2 THEN
+				WHEN t3.type = 2 THEN
 					count(
-						t3.option_content = t4.option_content
-					) * 10
-				ELSE
+						t3.option_id = t4.option_id
+					) * 5
+				WHEN t3.type = 4 THEN
 					count(
 						t3.option_content = t4.option_content
 					) * 15
+					ELSE 0
 				END AS grade
 				FROM
 					(
 						SELECT
 							TRIM(t1.option_id) AS option_id,
 							t1.question_id,
-							t1.answer_type,
+							tq1.type,
 							t1.user_id,
 							TRIM(t1.option_content) AS option_content
 						FROM
 							task_question_answer t1
 						LEFT JOIN task_question tq1 ON t1.question_id = tq1.id
-						AND tq1.type = 1
-						AND t1.answer_type IN (1, 2, 4)
+						where t1.answer_type  = 1
+						AND tq1.type IN (1, 2, 4)
 						AND t1.task_id = #{testId}
-						and t1.user_id = #{stuId}
+						and t1.user_id =#{stuId}
 					) t3
 				LEFT JOIN (
 					SELECT
 						TRIM(t2.option_id) AS option_id,
 						t2.question_id,
-						t2.answer_type,
+						tq2.type,
 						t2.user_id,
 						TRIM(t2.option_content) AS option_content
 					FROM
 						task_question_answer t2
 					LEFT JOIN task_question tq2 ON t2.question_id = tq2.id
-					AND tq2.type = 1
-					AND t2.answer_type IN (1, 2, 4)
-					AND t1.task_id = #{testId}
-					and t1.user_id = #{teacherId}
+					where t2.answer_type  = 2
+					 AND tq2.type IN (1, 2, 4)
+					AND t2.task_id = #{testId}
+					and t2.user_id = #{teacherId}
 				) t4 ON t3.question_id = t4.question_id
-				AND t3.answer_type != t4.answer_type
-				AND t3.user_id != t4.user_id
+				where  t3.user_id != t4.user_id
 
 			) t
 	</select>

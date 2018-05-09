@@ -142,8 +142,10 @@
             }else{
                 html = ' <p><span class="td1">:</span>&nbsp;&nbsp;<a href="${ctx}/user/showTaskTest.action?taskId='+data.newTestId+'">'+data.title+'</a></p>\n';
             }
-            $(".btm-tips").append(html);
-            recevice();
+            if(data.title!='stop'){
+                $(".btm-tips").append(html);
+                recevice();
+            }
 
         };
         websocket.onerror = function(event) {

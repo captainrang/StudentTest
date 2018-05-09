@@ -208,11 +208,11 @@
             if(data.title=='stop'){
 
                 alert("时间到，结束,5s后自动跳转主页!"+data.title);
-              /*  $(".submitFont").hide();
+                $(".submitFont").hide();
                 setTimeout(function(){
                         toList();
                     }
-                ,5000)*/
+                ,5000)
             }
            // recevice();
 
@@ -232,11 +232,11 @@
                 } else{
                     clearInterval(timer);
                     alert("时间到，结束,5s后自动跳转主页!");
-                    /*$(".submitFont").hide();
+                    $(".submitFont").hide();
                     setTimeout(function(){
                             toList();
                         }
-                        ,5000)*/
+                        ,5000)
                 }
             }
             timer = setInterval("CountDown()", 1000);
@@ -334,7 +334,7 @@
                                             <p>Q${code.index+1} : ${question.title}&nbsp;
                                                 <c:if test="${SESSION_USER_CONST_TYPE==1 }">
                                                 <div class="sxy-div-content upload-image">
-                                            <span>上传:</span>
+                                            <%--<span>上传:</span>--%>
                                                 <div class="fileinfo"><input type="file" name="file"></div>
                                             </div>
                                             </c:if>

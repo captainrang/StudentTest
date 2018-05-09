@@ -234,30 +234,23 @@
 </div>
 <script>
     function showImage(){
-        if($("#img").complete){
-            layer.open({
-                type: 1,
-                title: false,
-                closeBtn: 1,
-                area: '467px',
-                skin: 'layui-layer-nobg', //没有背景色
-                shadeClose: true,
-                content: $("#bookmistake")
-            });
-        }
+       $("#bookmistake").css({"display":"block"})
     }
     function toList(){
         window.location.href=contextpath+"/user/homePage.action";
     }
     function submit1() {
+        var params = $('#contentForm').serializeArray();
         $.ajax({
-            url:contextpath+"/user/testResult.action?testId="+$("#newTestId").val(),
-            type:'get',
+            url:contextpath+"/user/testResult.action",
+            async: false,
+            data:params,
+            type:'post',
             success:function(json){
                 if(json=='ok'){
                     alert("结果已入库");
                     setTimeout(function(){
-                            toList();
+                            window.location.go(-1);
                         }
                         ,5000)
                 }else{

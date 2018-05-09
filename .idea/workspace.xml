@@ -7,33 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff80562c-5b2e-4bb2-8e4d-ea4e6eb8eae6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/addUser.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/addUser.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/BaseController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/classTest/webSocket/ws/BaseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/webSocket/ws/BaseController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/classTest/student/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/com/classTest/student/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/classTest/student/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/classTest/student/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/classTest/student/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/classTest/student/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/classTest/webSocket/ws/MyWebSocketHandler$1.class" afterPath="$PROJECT_DIR$/target/classes/com/classTest/webSocket/ws/MyWebSocketHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/classTest/webSocket/ws/MyWebSocketHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/classTest/webSocket/ws/MyWebSocketHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/controller/UserController.class" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/service/UserService.class" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/webSocket/ws/MyWebSocketHandler$1.class" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/webSocket/ws/MyWebSocketHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/webSocket/ws/MyWebSocketHandler.class" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/webSocket/ws/MyWebSocketHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/UserDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/impl/UserDaoImpl.xml" afterPath="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/impl/UserDaoImpl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/student/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/classTest/student/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/student/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/classTest/student/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/db/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/config/db/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/homePage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/homePage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/homePage.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/homePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/classTest/student/dao/impl/UserDaoImpl.xml" afterPath="$PROJECT_DIR$/target/classes/com/classTest/student/dao/impl/UserDaoImpl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/db/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/config/db/jdbc.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/dao/impl/UserDaoImpl.xml" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/com/classTest/student/dao/impl/UserDaoImpl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/config/db/jdbc.properties" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/WEB-INF/classes/config/db/jdbc.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/pages/homePage.jsp" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/pages/homePage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/resources/homePage.js" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/resources/homePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/pages/testPaper.jsp" afterPath="$PROJECT_DIR$/target/test2-1.0-SNAPSHOT/pages/testPaper.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,55 +49,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserDaoImpl.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDaoImpl.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/dao/impl/UserDaoImpl.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4956">
-              <caret line="354" column="95" lean-forward="false" selection-start-line="354" selection-start-column="95" selection-end-line="354" selection-end-column="95" />
+            <state relative-caret-position="444">
+              <caret line="334" column="45" lean-forward="false" selection-start-line="334" selection-start-column="45" selection-end-line="334" selection-end-column="45" />
               <folding>
-                <marker date="1525369133291" expanded="true" signature="270:349" ph="select * fro... student" />
-                <marker date="1525369133291" expanded="true" signature="464:723" ph="select s.* ,... student" />
-                <marker date="1525369133291" expanded="true" signature="784:1042" ph="select s.* ,... teacher" />
-                <marker date="1525369133291" expanded="true" signature="1124:1180" ph="select id,ti... task_type" />
-                <marker date="1525369133291" expanded="true" signature="1418:1908" ph="SELECT t.rea... count" />
-                <marker date="1525369133291" expanded="true" signature="1604:1902" ph="SELECT count... student" />
-                <marker date="1525369133291" expanded="true" signature="1974:2047" ph="select id,ti... task_type" />
-                <marker date="1525369133291" expanded="true" signature="2119:2217" ph="select count... signed" />
-                <marker date="1525369133291" expanded="true" signature="2255:2338" ph="insert into signed... " />
-                <marker date="1525369133291" expanded="true" signature="2456:2620" ph="insert into task_type... " />
-                <marker date="1525369133291" expanded="true" signature="2743:2851" ph="insert into task_question... " />
-                <marker date="1525369133291" expanded="true" signature="3401:3446" ph="select * fro... task_type" />
-                <marker date="1525369133291" expanded="true" signature="3522:3578" ph="select * fro... task_question" />
-                <marker date="1525369133291" expanded="true" signature="3635:3703" ph="select * fro... task_question_option" />
-                <marker date="1525369133291" expanded="true" signature="3813:4042" ph="select * fro... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="4167:4347" ph="select sqa.o... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="4448:4576" ph="select a.opt... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="4659:4818" ph="insert into task_question_answer... " />
-                <marker date="1525369133291" expanded="true" signature="5253:5578" ph="insert into task_question_answer... " />
-                <marker date="1525369133291" expanded="true" signature="5646:5765" ph="select t1.* teacher" />
-                <marker date="1525369133291" expanded="true" signature="5827:5962" ph="SELECT CASE task_type" />
-                <marker date="1525369133291" expanded="true" signature="6028:6217" ph="SELECT count... grade" />
-                <marker date="1525369133291" expanded="true" signature="6301:6501" ph="SELECT t1.gr... grade" />
-                <marker date="1525369133291" expanded="true" signature="6301:6534" ph="SELECT t1.gr... grade" />
-                <marker date="1525369133291" expanded="true" signature="6638:6794" ph="SELECT count... grade" />
-                <marker date="1525369133291" expanded="true" signature="6876:7227" ph="SELECT t2.re... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="6876:7237" ph="SELECT t2.re... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="6876:7260" ph="SELECT t2.re... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="7361:7622" ph="SELECT count... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="7676:7890" ph="SELECT count... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="7748:7787" ph="select * fro... user_class" />
-                <marker date="1525369133291" expanded="true" signature="7815:7889" ph="select class... user_class" />
-                <marker date="1525369133291" expanded="true" signature="8038:9320" ph="SELECT sum(g... answer_type" />
-                <marker date="1525369133291" expanded="true" signature="8081:9312" ph="SELECT CASE TRIM" />
-                <marker date="1525369133291" expanded="true" signature="8392:8781" ph="SELECT TRIM(... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="8813:9194" ph="SELECT TRIM(... task_question_answer" />
-                <marker date="1525369133291" expanded="true" signature="9382:9485" ph="INSERT into grade... " />
-                <marker date="1525369133291" expanded="true" signature="9545:9564" ph="select * fro... class" />
-                <marker date="1525369133291" expanded="true" signature="9621:9831" ph="select s.use... student" />
-                <marker date="1525369133291" expanded="true" signature="9621:10076" ph="select s.use... " />
-                <marker date="1525369133291" expanded="true" signature="9866:10076" ph="select s.use... teacher" />
-                <marker date="1525369133291" expanded="true" signature="10598:10641" ph="INSERT into user_class... " />
-                <marker date="1525369133291" expanded="true" signature="10598:10686" ph="INSERT into user_class... " />
+                <marker date="1525830396001" expanded="true" signature="270:349" ph="select * fro... student" />
+                <marker date="1525830396001" expanded="true" signature="464:723" ph="select s.* ,... student" />
+                <marker date="1525830396001" expanded="true" signature="784:1042" ph="select s.* ,... teacher" />
+                <marker date="1525830396001" expanded="true" signature="1124:1180" ph="select id,ti... task_type" />
+                <marker date="1525830396001" expanded="true" signature="1418:1908" ph="SELECT t.rea... count" />
+                <marker date="1525830396001" expanded="true" signature="1604:1902" ph="SELECT count... student" />
+                <marker date="1525830396001" expanded="true" signature="1974:2047" ph="select id,ti... task_type" />
+                <marker date="1525830396001" expanded="true" signature="2119:2217" ph="select count... signed" />
+                <marker date="1525830396001" expanded="true" signature="2255:2338" ph="insert into signed... " />
+                <marker date="1525830396001" expanded="true" signature="2456:2620" ph="insert into task_type... " />
+                <marker date="1525830396001" expanded="true" signature="2743:2851" ph="insert into task_question... " />
+                <marker date="1525830396001" expanded="true" signature="3401:3446" ph="select * fro... task_type" />
+                <marker date="1525830396001" expanded="true" signature="3522:3578" ph="select * fro... task_question" />
+                <marker date="1525830396001" expanded="true" signature="3635:3703" ph="select * fro... task_question_option" />
+                <marker date="1525830396001" expanded="true" signature="3813:4042" ph="select * fro... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="4167:4347" ph="select sqa.o... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="4448:4576" ph="select a.opt... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="4659:4818" ph="insert into task_question_answer... " />
+                <marker date="1525830396001" expanded="true" signature="5253:5578" ph="insert into task_question_answer... " />
+                <marker date="1525830396001" expanded="true" signature="5646:5765" ph="select t1.* teacher" />
+                <marker date="1525830396001" expanded="true" signature="5827:5962" ph="SELECT CASE task_type" />
+                <marker date="1525830396001" expanded="true" signature="6028:6217" ph="SELECT count... grade" />
+                <marker date="1525830396001" expanded="true" signature="6301:6501" ph="SELECT t1.gr... grade" />
+                <marker date="1525830396001" expanded="true" signature="6301:6534" ph="SELECT t1.gr... grade" />
+                <marker date="1525830396001" expanded="true" signature="6638:6794" ph="SELECT count... grade" />
+                <marker date="1525830396001" expanded="true" signature="6875:7272" ph="SELECT t2.id... student" />
+                <marker date="1525830396001" expanded="true" signature="7134:7236" ph="SELECT t1.id... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="7239:7249" ph="SELECT t2.re... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="7239:7272" ph="SELECT t2.re... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="7373:7634" ph="SELECT count... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="7688:7912" ph="SELECT count... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="7770:7809" ph="select * fro... user_class" />
+                <marker date="1525830396001" expanded="true" signature="7837:7911" ph="select class... user_class" />
+                <marker date="1525830396001" expanded="true" signature="7968:9455" ph="SELECT (sum(... type" />
+                <marker date="1525830396001" expanded="true" signature="8001:8062" ph="select count... task_question" />
+                <marker date="1525830396001" expanded="true" signature="8001:8071" ph="select count... task_question" />
+                <marker date="1525830396001" expanded="true" signature="8075:8244" ph="select count... user_id" />
+                <marker date="1525830396001" expanded="true" signature="8104:8241" ph="SELECT t6.us... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="8274:9447" ph="SELECT CASE TRIM" />
+                <marker date="1525830396001" expanded="true" signature="8604:8958" ph="SELECT TRIM(... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="8991:9367" ph="SELECT TRIM(... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="9552:10794" ph="SELECT sum(g... answer_type" />
+                <marker date="1525830396001" expanded="true" signature="9595:10786" ph="SELECT CASE TRIM" />
+                <marker date="1525830396001" expanded="true" signature="9910:10174" ph="SELECT TRIM(... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="9910:10295" ph="SELECT TRIM(... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="10327:10706" ph="SELECT TRIM(... task_question_answer" />
+                <marker date="1525830396001" expanded="true" signature="10856:10959" ph="INSERT into grade... " />
+                <marker date="1525830396001" expanded="true" signature="11019:11038" ph="select * fro... class" />
+                <marker date="1525830396001" expanded="true" signature="11095:11305" ph="select s.use... student" />
+                <marker date="1525830396001" expanded="true" signature="11095:11550" ph="select s.use... " />
+                <marker date="1525830396001" expanded="true" signature="11340:11550" ph="select s.use... teacher" />
+                <marker date="1525830396001" expanded="true" signature="12072:12115" ph="INSERT into user_class... " />
+                <marker date="1525830396001" expanded="true" signature="12072:12160" ph="INSERT into user_class... " />
               </folding>
             </state>
           </provider>
@@ -117,8 +116,18 @@
       <file leaf-file-name="testPaper.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3528">
-              <caret line="252" column="53" lean-forward="false" selection-start-line="252" selection-start-column="53" selection-end-line="252" selection-end-column="53" />
+            <state relative-caret-position="131">
+              <caret line="381" column="29" lean-forward="true" selection-start-line="381" selection-start-column="16" selection-end-line="381" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/homePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -127,38 +136,35 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="92">
+              <caret line="617" column="7" lean-forward="true" selection-start-line="617" selection-start-column="7" selection-end-line="617" selection-end-column="7" />
+              <folding>
+                <element signature="e#11893#11909#0" expanded="true" />
+                <element signature="e#11967#11983#0" expanded="true" />
+                <element signature="e#12040#12056#0" expanded="true" />
+                <element signature="e#12114#12130#0" expanded="true" />
+                <element signature="e#19676#19692#0" expanded="true" />
+                <element signature="e#25888#25904#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showTaskTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/showTaskTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config/db/jdbc.properties">
+      <file leaf-file-name="showTaskTest.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/showTaskTest.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="1" column="165" lean-forward="false" selection-start-line="1" selection-start-column="165" selection-end-line="1" selection-end-column="165" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homePage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/homePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2114">
-              <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="75" column="15" lean-forward="false" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
+            <state relative-caret-position="354">
+              <caret line="39" column="75" lean-forward="false" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -167,42 +173,41 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1876">
-              <caret line="189" column="23" lean-forward="false" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
+            <state relative-caret-position="384">
+              <caret line="164" column="39" lean-forward="false" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="39" />
               <folding>
-                <element signature="e#5092#5112#0" expanded="true" />
-                <element signature="e#5363#5364#0" expanded="true" />
-                <element signature="e#5404#5405#0" expanded="true" />
+                <element signature="e#4497#4498#0" expanded="true" />
+                <element signature="e#4549#4550#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/dao/UserDao.java">
+      <file leaf-file-name="testAppLogin.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/testAppLogin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1148">
-              <caret line="86" column="19" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addUser.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/addUser.jsp">
+      <file leaf-file-name="shenyue.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
-              <caret line="70" column="52" lean-forward="false" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="52" />
+            <state relative-caret-position="98">
+              <caret line="238" column="22" lean-forward="true" selection-start-line="238" selection-start-column="22" selection-end-line="238" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addUser.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/addUser.js">
+      <file leaf-file-name="queryPaiMing.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/queryPaiMing.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            <state relative-caret-position="134">
+              <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -221,29 +226,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$.ajax</find>
-      <find>getLoginUserInfo</find>
-      <find>resultMap=&quot;java.lang.Long&quot;</find>
-      <find>提交</find>
-      <find>发布试卷</find>
-      <find>recevice</find>
-      <find>buttonDiv</find>
-      <find>type=&quot;file</find>
-      <find>submit1</find>
-      <find>submitFont</find>
-      <find>post</find>
-      <find>addSurveyAnswers</find>
-      <find>sign</find>
-      <find>getUserTestInfo</find>
-      <find>testPapering</find>
-      <find>isnotSign</find>
-      <find>queryPaiMingTail</find>
       <find>.buttonDiv</find>
       <find>queryPaiMingTailCount</find>
       <find>fbTest</find>
       <find>file</find>
-      <find>newTestId</find>
-      <find>testResult</find>
       <find>textsocreValues</find>
       <find>myModal</find>
       <find>userInfoTable</find>
@@ -251,6 +237,25 @@
       <find>add_password</find>
       <find>addUserOpt</find>
       <find>add_userType</find>
+      <find>mybatis-confi</find>
+      <find>mybatis</find>
+      <find>停止测试</find>
+      <find>broadcast</find>
+      <find>stopTest</find>
+      <find>recevice</find>
+      <find>task_question_answer</find>
+      <find>testName</find>
+      <find>img</find>
+      <find>saveCheckboxAnswer</find>
+      <find>testResult</find>
+      <find>bookmistake</find>
+      <find>getDTL</find>
+      <find>newTestId</find>
+      <find>getQuestionGrade</find>
+      <find>showTask</find>
+      <find>stuId</find>
+      <find>shenyue</find>
+      <find>queryPaiMing</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -295,27 +300,27 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/util/ImageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/showTaskTest.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/queryPaiMing.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/queryPaiMing.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/controller/MsgController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/showTaskTest.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/BaseController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/homePage.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/homePage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/util/PageResultForBootstrap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/addUser.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/db/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/impl/UserDaoImpl.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/addUser.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/homePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/classTest/student/dao/impl/UserDaoImpl.xml" />
       </list>
     </option>
   </component>
@@ -339,8 +344,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="446" />
+    <option name="y" value="54" />
     <option name="width" value="768" />
     <option name="height" value="726" />
   </component>
@@ -359,7 +364,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -489,7 +493,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="log4j" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test2" type="b2602c69:ProjectViewProjectNode" />
@@ -506,19 +528,12 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="test2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -704,17 +719,30 @@
       <workItem from="1524827044882" duration="1432000" />
       <workItem from="1524842130763" duration="13267000" />
       <workItem from="1525357842978" duration="8034000" />
-      <workItem from="1525390473462" duration="9000" />
+      <workItem from="1525390473462" duration="734000" />
+      <workItem from="1525393376673" duration="23000" />
+      <workItem from="1525394201530" duration="47000" />
+      <workItem from="1525689624260" duration="721000" />
+      <workItem from="1525783101539" duration="17498000" />
     </task>
+    <task id="LOCAL-00001" summary="个人信息">
+      <created>1525390542339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525390542339</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223862000" />
+    <option name="totallyTimeSpent" value="242876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.276771" sideWeight="0.5030349" order="7" side_tool="true" content_ui="tabs" />
@@ -725,22 +753,21 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25493172" sideWeight="0.4713376" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19575115" sideWeight="0.4713376" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29210925" sideWeight="0.5065574" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40163934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25493172" sideWeight="0.52866244" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09390445" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6556837" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40163934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -755,7 +782,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4827018" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6556837" sideWeight="0.4969651" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -765,8 +792,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25493172" sideWeight="0.4713376" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19575115" sideWeight="0.4713376" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29210925" sideWeight="0.5065574" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40163934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25493172" sideWeight="0.52866244" order="3" side_tool="true" content_ui="tabs" />
@@ -777,6 +804,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="个人信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="个人信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,31 +844,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>231</line>
+          <line>232</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>192</line>
+          <line>193</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>239</line>
+          <line>240</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>276</line>
+          <line>277</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java</url>
-          <line>74</line>
+          <line>75</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -849,7 +880,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>311</line>
+          <line>312</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
@@ -861,69 +892,46 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>147</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>663</line>
+          <line>665</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>713</line>
+          <line>715</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
-          <line>724</line>
+          <line>726</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java</url>
+          <line>404</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="195" column="4" lean-forward="false" selection-start-line="195" selection-start-column="4" selection-end-line="195" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/testAppLogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="73" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/broadcast.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/talk.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.0.5.RELEASE/spring-websocket-4.0.5.RELEASE.jar!/org/springframework/web/socket/server/support/WebSocketHttpRequestHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="65" column="140" lean-forward="false" selection-start-line="65" selection-start-column="140" selection-end-line="65" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -968,47 +976,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/util/ImageController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/queryPaiMing.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="117" lean-forward="false" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/MsgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="78" column="82" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,25 +991,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.2.RELEASE/spring-web-4.0.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/lib/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="255" column="35" lean-forward="false" selection-start-line="252" selection-start-column="7" selection-end-line="255" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,14 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1114,52 +1063,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/homePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="43" column="53" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/showTaskTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/showTaskTest.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="47" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/fbTest.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="177" column="32" lean-forward="true" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="32" />
-          <folding>
-            <marker date="1523499156527" expanded="true" signature="8253:8265" ph="..." />
-            <marker date="1523499156527" expanded="true" signature="8389:8399" ph="..." />
-            <marker date="1523499156527" expanded="true" signature="8402:8408" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/common/resource.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-48">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/webSocket/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1183,23 +1090,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1876">
-          <caret line="189" column="23" lean-forward="false" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
-          <folding>
-            <element signature="e#5092#5112#0" expanded="true" />
-            <element signature="e#5363#5364#0" expanded="true" />
-            <element signature="e#5404#5405#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/db/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="1" column="165" lean-forward="false" selection-start-line="1" selection-start-column="165" selection-end-line="1" selection-end-column="165" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,95 +1105,271 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/addUser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3528">
-          <caret line="252" column="53" lean-forward="false" selection-start-line="252" selection-start-column="53" selection-end-line="252" selection-end-column="53" />
+        <state relative-caret-position="1022">
+          <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/log4j/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/MsgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="78" column="82" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/webSocket/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/fbTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="177" column="32" lean-forward="true" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="32" />
+          <folding>
+            <marker date="1523499156527" expanded="true" signature="8253:8265" ph="..." />
+            <marker date="1523499156527" expanded="true" signature="8389:8399" ph="..." />
+            <marker date="1523499156527" expanded="true" signature="8402:8408" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/addUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="70" column="52" lean-forward="false" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/broadcast.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/talk.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/homePage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2114">
-          <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+        <state relative-caret-position="254">
+          <caret line="139" column="120" lean-forward="false" selection-start-line="139" selection-start-column="105" selection-end-line="139" selection-end-column="120" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/addUser.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/webSocket/ws/MyWebSocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="70" column="52" lean-forward="false" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="52" />
+        <state relative-caret-position="96">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/homePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/testAppLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.2.RELEASE/spring-web-4.0.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/testPaper.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="381" column="29" lean-forward="true" selection-start-line="381" selection-start-column="16" selection-end-line="381" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="164" column="39" lean-forward="false" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="39" />
+          <folding>
+            <element signature="e#4497#4498#0" expanded="true" />
+            <element signature="e#4549#4550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/shenyue.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="238" column="22" lean-forward="true" selection-start-line="238" selection-start-column="22" selection-end-line="238" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/queryPaiMing.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/showTaskTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="39" column="75" lean-forward="false" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/showTaskTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="92">
+          <caret line="617" column="7" lean-forward="true" selection-start-line="617" selection-start-column="7" selection-end-line="617" selection-end-column="7" />
+          <folding>
+            <element signature="e#11893#11909#0" expanded="true" />
+            <element signature="e#11967#11983#0" expanded="true" />
+            <element signature="e#12040#12056#0" expanded="true" />
+            <element signature="e#12114#12130#0" expanded="true" />
+            <element signature="e#19676#19692#0" expanded="true" />
+            <element signature="e#25888#25904#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/classTest/student/dao/impl/UserDaoImpl.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4956">
-          <caret line="354" column="95" lean-forward="false" selection-start-line="354" selection-start-column="95" selection-end-line="354" selection-end-column="95" />
+        <state relative-caret-position="444">
+          <caret line="334" column="45" lean-forward="false" selection-start-line="334" selection-start-column="45" selection-end-line="334" selection-end-column="45" />
           <folding>
-            <marker date="1525369133291" expanded="true" signature="270:349" ph="select * fro... student" />
-            <marker date="1525369133291" expanded="true" signature="464:723" ph="select s.* ,... student" />
-            <marker date="1525369133291" expanded="true" signature="784:1042" ph="select s.* ,... teacher" />
-            <marker date="1525369133291" expanded="true" signature="1124:1180" ph="select id,ti... task_type" />
-            <marker date="1525369133291" expanded="true" signature="1418:1908" ph="SELECT t.rea... count" />
-            <marker date="1525369133291" expanded="true" signature="1604:1902" ph="SELECT count... student" />
-            <marker date="1525369133291" expanded="true" signature="1974:2047" ph="select id,ti... task_type" />
-            <marker date="1525369133291" expanded="true" signature="2119:2217" ph="select count... signed" />
-            <marker date="1525369133291" expanded="true" signature="2255:2338" ph="insert into signed... " />
-            <marker date="1525369133291" expanded="true" signature="2456:2620" ph="insert into task_type... " />
-            <marker date="1525369133291" expanded="true" signature="2743:2851" ph="insert into task_question... " />
-            <marker date="1525369133291" expanded="true" signature="3401:3446" ph="select * fro... task_type" />
-            <marker date="1525369133291" expanded="true" signature="3522:3578" ph="select * fro... task_question" />
-            <marker date="1525369133291" expanded="true" signature="3635:3703" ph="select * fro... task_question_option" />
-            <marker date="1525369133291" expanded="true" signature="3813:4042" ph="select * fro... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="4167:4347" ph="select sqa.o... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="4448:4576" ph="select a.opt... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="4659:4818" ph="insert into task_question_answer... " />
-            <marker date="1525369133291" expanded="true" signature="5253:5578" ph="insert into task_question_answer... " />
-            <marker date="1525369133291" expanded="true" signature="5646:5765" ph="select t1.* teacher" />
-            <marker date="1525369133291" expanded="true" signature="5827:5962" ph="SELECT CASE task_type" />
-            <marker date="1525369133291" expanded="true" signature="6028:6217" ph="SELECT count... grade" />
-            <marker date="1525369133291" expanded="true" signature="6301:6501" ph="SELECT t1.gr... grade" />
-            <marker date="1525369133291" expanded="true" signature="6301:6534" ph="SELECT t1.gr... grade" />
-            <marker date="1525369133291" expanded="true" signature="6638:6794" ph="SELECT count... grade" />
-            <marker date="1525369133291" expanded="true" signature="6876:7227" ph="SELECT t2.re... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="6876:7237" ph="SELECT t2.re... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="6876:7260" ph="SELECT t2.re... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="7361:7622" ph="SELECT count... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="7676:7890" ph="SELECT count... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="7748:7787" ph="select * fro... user_class" />
-            <marker date="1525369133291" expanded="true" signature="7815:7889" ph="select class... user_class" />
-            <marker date="1525369133291" expanded="true" signature="8038:9320" ph="SELECT sum(g... answer_type" />
-            <marker date="1525369133291" expanded="true" signature="8081:9312" ph="SELECT CASE TRIM" />
-            <marker date="1525369133291" expanded="true" signature="8392:8781" ph="SELECT TRIM(... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="8813:9194" ph="SELECT TRIM(... task_question_answer" />
-            <marker date="1525369133291" expanded="true" signature="9382:9485" ph="INSERT into grade... " />
-            <marker date="1525369133291" expanded="true" signature="9545:9564" ph="select * fro... class" />
-            <marker date="1525369133291" expanded="true" signature="9621:9831" ph="select s.use... student" />
-            <marker date="1525369133291" expanded="true" signature="9621:10076" ph="select s.use... " />
-            <marker date="1525369133291" expanded="true" signature="9866:10076" ph="select s.use... teacher" />
-            <marker date="1525369133291" expanded="true" signature="10598:10641" ph="INSERT into user_class... " />
-            <marker date="1525369133291" expanded="true" signature="10598:10686" ph="INSERT into user_class... " />
+            <marker date="1525830396001" expanded="true" signature="270:349" ph="select * fro... student" />
+            <marker date="1525830396001" expanded="true" signature="464:723" ph="select s.* ,... student" />
+            <marker date="1525830396001" expanded="true" signature="784:1042" ph="select s.* ,... teacher" />
+            <marker date="1525830396001" expanded="true" signature="1124:1180" ph="select id,ti... task_type" />
+            <marker date="1525830396001" expanded="true" signature="1418:1908" ph="SELECT t.rea... count" />
+            <marker date="1525830396001" expanded="true" signature="1604:1902" ph="SELECT count... student" />
+            <marker date="1525830396001" expanded="true" signature="1974:2047" ph="select id,ti... task_type" />
+            <marker date="1525830396001" expanded="true" signature="2119:2217" ph="select count... signed" />
+            <marker date="1525830396001" expanded="true" signature="2255:2338" ph="insert into signed... " />
+            <marker date="1525830396001" expanded="true" signature="2456:2620" ph="insert into task_type... " />
+            <marker date="1525830396001" expanded="true" signature="2743:2851" ph="insert into task_question... " />
+            <marker date="1525830396001" expanded="true" signature="3401:3446" ph="select * fro... task_type" />
+            <marker date="1525830396001" expanded="true" signature="3522:3578" ph="select * fro... task_question" />
+            <marker date="1525830396001" expanded="true" signature="3635:3703" ph="select * fro... task_question_option" />
+            <marker date="1525830396001" expanded="true" signature="3813:4042" ph="select * fro... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="4167:4347" ph="select sqa.o... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="4448:4576" ph="select a.opt... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="4659:4818" ph="insert into task_question_answer... " />
+            <marker date="1525830396001" expanded="true" signature="5253:5578" ph="insert into task_question_answer... " />
+            <marker date="1525830396001" expanded="true" signature="5646:5765" ph="select t1.* teacher" />
+            <marker date="1525830396001" expanded="true" signature="5827:5962" ph="SELECT CASE task_type" />
+            <marker date="1525830396001" expanded="true" signature="6028:6217" ph="SELECT count... grade" />
+            <marker date="1525830396001" expanded="true" signature="6301:6501" ph="SELECT t1.gr... grade" />
+            <marker date="1525830396001" expanded="true" signature="6301:6534" ph="SELECT t1.gr... grade" />
+            <marker date="1525830396001" expanded="true" signature="6638:6794" ph="SELECT count... grade" />
+            <marker date="1525830396001" expanded="true" signature="6875:7272" ph="SELECT t2.id... student" />
+            <marker date="1525830396001" expanded="true" signature="7134:7236" ph="SELECT t1.id... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="7239:7249" ph="SELECT t2.re... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="7239:7272" ph="SELECT t2.re... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="7373:7634" ph="SELECT count... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="7688:7912" ph="SELECT count... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="7770:7809" ph="select * fro... user_class" />
+            <marker date="1525830396001" expanded="true" signature="7837:7911" ph="select class... user_class" />
+            <marker date="1525830396001" expanded="true" signature="7968:9455" ph="SELECT (sum(... type" />
+            <marker date="1525830396001" expanded="true" signature="8001:8062" ph="select count... task_question" />
+            <marker date="1525830396001" expanded="true" signature="8001:8071" ph="select count... task_question" />
+            <marker date="1525830396001" expanded="true" signature="8075:8244" ph="select count... user_id" />
+            <marker date="1525830396001" expanded="true" signature="8104:8241" ph="SELECT t6.us... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="8274:9447" ph="SELECT CASE TRIM" />
+            <marker date="1525830396001" expanded="true" signature="8604:8958" ph="SELECT TRIM(... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="8991:9367" ph="SELECT TRIM(... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="9552:10794" ph="SELECT sum(g... answer_type" />
+            <marker date="1525830396001" expanded="true" signature="9595:10786" ph="SELECT CASE TRIM" />
+            <marker date="1525830396001" expanded="true" signature="9910:10174" ph="SELECT TRIM(... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="9910:10295" ph="SELECT TRIM(... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="10327:10706" ph="SELECT TRIM(... task_question_answer" />
+            <marker date="1525830396001" expanded="true" signature="10856:10959" ph="INSERT into grade... " />
+            <marker date="1525830396001" expanded="true" signature="11019:11038" ph="select * fro... class" />
+            <marker date="1525830396001" expanded="true" signature="11095:11305" ph="select s.use... student" />
+            <marker date="1525830396001" expanded="true" signature="11095:11550" ph="select s.use... " />
+            <marker date="1525830396001" expanded="true" signature="11340:11550" ph="select s.use... teacher" />
+            <marker date="1525830396001" expanded="true" signature="12072:12115" ph="INSERT into user_class... " />
+            <marker date="1525830396001" expanded="true" signature="12072:12160" ph="INSERT into user_class... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/addUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>

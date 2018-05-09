@@ -118,6 +118,7 @@ public class UserController extends BaseController {
      * @param request
      * @return
      */
+    @RequestMapping("/stopTest")
     public String stopTest(HttpServletRequest request) {
         Map<String, Object> mapMessage = new HashMap<String, Object>();
         String flag = "ok";
@@ -410,7 +411,7 @@ public class UserController extends BaseController {
                                 MultipartFile files = file[y];
                                 //保存文件
                                 saveFile(files, path);
-                                jdbcpath = path + files.getOriginalFilename();
+                                jdbcpath = files.getOriginalFilename();
 
                             }
                             map3.put("attachment", jdbcpath);
@@ -470,6 +471,7 @@ public class UserController extends BaseController {
     public ModelAndView showTaskTest(HttpServletRequest request) {
         ModelAndView model = new ModelAndView();
         String newTestId = request.getParameter("taskId");
+
         model.addObject("taskId", newTestId);
         model.setViewName("/showTaskTest");
         return model;
@@ -628,10 +630,10 @@ public class UserController extends BaseController {
         Map<String, Object> userMap = this.getUserInfo();
         // 获取当前考试的正确率，答题率，
         Map<String, Object> map = useService.getDTL(testId, userMap.get("id").toString());
-        // Map<String,Object> map2 = useService.getZQL(testId,userMap.get("id").toString());
+        Map<String,Object> map2 = useService.getZQL(testId,userMap.get("id").toString());
 
-        model.addObject("dtl", map.get("dtl"));
-        model.addObject("zql", "");//map2.get("zql") 暂时无法计算正确率。计算题 如果给的不是全分，这题算对还是错呢，这里有疑问。
+        model.addObject("dtl", map.get("dtl")+"%"); //有多少人答题
+        model.addObject("zql", map2.get("zql")+"%");//map2.get("zql") 暂时无法计算正确率。计算题 如果给的不是全分，这题算对还是错呢，这里有疑问。
 
 
         return model;
@@ -657,11 +659,11 @@ public class UserController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "/testResult")
+    @RequestMapping(value = "/testResult",method = RequestMethod.POST)
     @ResponseBody
     public String testResult(HttpServletRequest request) {
         String flag = "ok";
-        String newTestId = request.getParameter("testId");
+        String newTestId = request.getParameter("newTestId");
         String stuId = request.getParameter("stuId");
         Map<String, Object> paraMap = new HashMap<String, Object>();
         Map<String,Object> map = this.getUserInfo();
@@ -669,7 +671,7 @@ public class UserController extends BaseController {
         paraMap.put("stuId",stuId);
         paraMap.put("testId",newTestId);
         String[] grades = request.getParameterValues("input_soce_4");
-        Long gradeTotal = Long.valueOf(0);//统计分数
+        Long gradeTotal = 0L;//统计分数
         for(int i =0;i<grades.length;i++){
             //String grade1 = request.getParameter(grades[i]);
             gradeTotal += Long.parseLong(grades[i]);
