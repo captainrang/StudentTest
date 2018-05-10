@@ -64,6 +64,10 @@ function sign() {
 
     })
 }
+
+function testManage(){
+    window.location.href = contextpath+"/user/testManage.action"
+}
 /*
  * 判断变量是否空值
  * undefined, null, '', false, 0, [], {} 均返回true，否则返回false

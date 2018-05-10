@@ -181,10 +181,11 @@
             <p><span class="td1">当前到课情况:</span>&nbsp;&nbsp;<span >应到${tj.targetReach}人&nbsp;&nbsp;实到${tj.reached}人 </span><span class="td1">到课率为：</span><span>${tj.reachpercent}</span></p>
             <p><span class="td1">当前登录人:</span>&nbsp;&nbsp;<span >${SESSION_USER_CONST_TEACHER.realname}</span></p>
             <p><span class="td1">当前所在班级:</span>&nbsp;&nbsp;<span>${SESSION_USER_CONST_TEACHER.className}</span></p>
-            <p><span class="td1">操作:</span >&nbsp;&nbsp;
+            <p><span class="td1">操作:</span >
                 <a  class="btnSubmit" id="btnSubmit" onclick="fbTest()">发布测试</a>
                 <a  class="btnSubmit" id="stopTest" onclick="stopTest()">停止测试</a>
                 <a  class="btnSubmit" id="newUser" onclick="newUser()">新增用户</a>
+                <%--<a  class="btnSubmit" id="testManage" onclick="testManage()">试题管理</a>--%>
             </p>
             <div class="btm-tips">
             </div>

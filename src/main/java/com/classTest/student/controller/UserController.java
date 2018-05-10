@@ -57,6 +57,9 @@ public class UserController extends BaseController {
         return model;
     }
 
+//    public ModelAndView testManage(HttpServletRequest request){
+//
+//    }
     /**
      * 个人主页
      *
@@ -670,7 +673,8 @@ public class UserController extends BaseController {
         paraMap.put("teacherId", map.get("id"));
         paraMap.put("stuId",stuId);
         paraMap.put("testId",newTestId);
-        String[] grades = request.getParameterValues("input_soce_4");
+        String textsocreValues= request.getParameter("textsocreValues");
+        String[] grades =  request.getParameterValues(textsocreValues);
         Long gradeTotal = 0L;//统计分数
         for(int i =0;i<grades.length;i++){
             //String grade1 = request.getParameter(grades[i]);

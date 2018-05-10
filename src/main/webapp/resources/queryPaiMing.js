@@ -27,7 +27,7 @@ function LoadinDataTable() {
                 field: 'studentName',
                 title: '学生姓名'
             }, {
-                field: 'testName',
+                field: 'title',
                 title: '测试名字'
             },{
                 field: 'grade',

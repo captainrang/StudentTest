@@ -297,9 +297,9 @@ select count(user_id)from
 
 				if(	GROUP_CONCAT(t3.option_id) = GROUP_CONCAT(t4.option_id),1,0)
 
-				WHEN t3.type = 3 THEN
+				WHEN t3.type = 4 THEN
 					count(
-						t3.option_content = t4.option_content
+						trim(t3.option_content) = trim(t4.option_content)
 					)
 					ELSE 0
 				END AS hdquestionCount
@@ -335,7 +335,7 @@ select count(user_id)from
 					and t2.user_id = #{userId}
 				) t4 ON t3.question_id = t4.question_id
 				where  t3.user_id != t4.user_id
-
+					group by t3.type
 			) t
 
 
